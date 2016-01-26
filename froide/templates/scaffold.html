@@ -19,7 +19,7 @@
   {# Translators: meta keywords #}
   <meta name="keywords" content="{% trans "Freedom of Information Requests, Freedom of Information Law, Public Body Information" %}" />
   {# Translators: meta description #}
-  <meta name="description" content="{% block metadescription %}{% blocktrans with site=SITE_NAME %}{{ site }} helps you to make freedom of information requests to public bodies{% endblocktrans %}{% endblock %}"/>
+  {% block metadescription %}<meta name="description" content="{% blocktrans with site=SITE_NAME %}{{ site }} helps you to make freedom of information requests to public bodies{% endblocktrans %}"/>{% endblock %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   {% block additional_meta %}
   {% endblock %}
