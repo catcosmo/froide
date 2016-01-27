@@ -12,14 +12,14 @@
     {% block first_index_row %}
     <div class="col-lg-6 col-md-6">
       {% block first_index_row_search %}
-      <h1>{% block site_name %}{{ SITE_NAME }}{% endblock %}</h1>
+      {% block site_name %}<h1>{{ SITE_NAME }}</h1>{% endblock %}
       {% block site_description %}
         <p>
           {% blocktrans %}This site publishes Freedom of Information requests and helps you to make your own!{% endblocktrans %}
         </p>
       {% endblock %}
       <br/>
-      <form method="get" action="{% url 'foirequest-search' %}">
+      <form class="search-form" method="get" action="{% url 'foirequest-search' %}">
         <label for="index-search">
           {% blocktrans %}Search {{ foicount }} requests and {{ pbcount }} public bodies:{% endblocktrans %}
         </label>
